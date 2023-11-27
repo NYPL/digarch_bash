@@ -28,13 +28,44 @@ for f in `find . -name "$collnum-*.tar"`; do
 
 done
 
+#is collnum just whatever was entered after the first question? 
+for f in `find . -name "$collnum_*_*.tar"`; do 
+	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
+	mv $f /Volumes/Staging/KFStreamArchive
+
+done
+
 for f in `find . -name "$collnum-*.001"`; do 
 	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
 	mv $f /Volumes/Staging/ingest/diskImages/$collnum/$directory/objects/
 
 done
 
+for f in `find . -name "$collnum_*_*.001"`; do 
+	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
+	mv $f /Volumes/Staging/ingest/diskImages/$collnum/$directory/objects/
+
+done
+
+for f in `find . -name "$collnum-*.img"`; do
+	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
+	mv $f /Volumes/DigArchDiskStation/Staging/ingest/diskImages/$collnum/$directory/objects/
+
+done
+
+for f in `find . -name "$collnum_*_*.img"`; do
+	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
+	mv $f /Volumes/DigArchDiskStation/Staging/ingest/diskImages/$collnum/$directory/objects/
+
+done
+
 for f in `find . -name "$collnum-*.log"`; do 
+	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
+	mv $f /Volumes/Staging/ingest/diskImages/$collnum/$directory/metadata/
+
+done
+
+for f in `find . -name "$collnum_*_*.log"`; do 
 	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
 	mv $f /Volumes/Staging/ingest/diskImages/$collnum/$directory/metadata/
 
