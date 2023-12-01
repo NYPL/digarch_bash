@@ -6,7 +6,7 @@ BLUE='\033[0;36m'
 NC='\033[0m'
 
 echo -e "${BLUE}This script will create SIP templates for each item.${NC}"
-echo -e "${BLUE}Please enter your collection number in the M##### format:${NC}"
+echo -e "${BLUE}Please enter the four digit SPEC aquisition id in the format ACQ_#### format:${NC}"
 
 read collection
 
@@ -24,7 +24,7 @@ then
 
 	for x in $(seq -f "%04g" $first $last)
 	do 
-	eval mkdir -p -v $collection-$x/{objects,metadata/submissionDocumentation}
+	eval mkdir -p -v $collection"_"$x/{objects,metadata}
 	done
 
 	echo -e "${BLUE}The folders for $collection have been built.${NC}"
