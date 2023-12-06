@@ -8,53 +8,53 @@ NC='\033[0m'
 
 echo -e  "${BLUE}Please enter your collection number to initiate the move.${NC}"
 
-read collnum
+read acqid
 
-for f in `find . -name "$collnum-*.tar"`; do 
+for f in `find . -name "$acqid-*.tar"`; do 
 	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
 	mv $f /Volumes/Staging/KFStreamArchive
 
 done
 
-for f in `find . -name "$collnum_*.tar"`; do 
-	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
+for f in `find . -name "$acqid_*.tar"`; do 
+	directory=`echo "$acqname" | cut -d . -f 1 `
 	mv $f /Volumes/Staging/KFStreamArchive
 
 done
 
-for f in `find . -name "$collnum-*.001"`; do 
+for f in `find . -name "$acqid-*.001"`; do 
 	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
-	mv $f /Volumes/Staging/ingest/diskImages/$collnum/$directory/objects/
+	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/objects/
 
 done
 
-for f in `find . -name "collnum_*.001"`; do 
-	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
-	mv $f /Volumes/Staging/ingest/diskImages/$collnum/$directory/objects/
+for f in `find . -name "$acqid_*.001"`; do 
+	directory=`echo "$acqname" | cut -d . -f 1 `
+	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/objects/
 
 done
 
-for f in `find . -name "$collnum-*.img"`; do
+for f in `find . -name "$acqid-*.img"`; do
 	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
-	mv $f /Volumes/DigArchDiskStation/Staging/ingest/diskImages/$collnum/$directory/objects/
+	mv $f /Volumes/DigArchDiskStation/Staging/ingest/diskImages/$acqid/$directory/objects/
 
 done
 
-for f in `find . -name "collnum_*.img"`; do
-	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
-	mv $f /Volumes/DigArchDiskStation/Staging/ingest/diskImages/$collnum/$directory/objects/
+for f in `find . -name "$acqid_*.img"`; do
+	directory=`echo "$acqname" | cut -d . -f 1 `
+	mv $f /Volumes/DigArchDiskStation/Staging/ingest/diskImages/$acqid/$directory/objects/
 
 done
 
-for f in `find . -name "$collnum-*.log"`; do 
+for f in `find . -name "$acqid-*.log"`; do 
 	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
-	mv $f /Volumes/Staging/ingest/diskImages/$collnum/$directory/metadata/
+	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/metadata/
 
 done
 
-for f in `find . -name "$collnum_*.log"`; do 
-	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
-	mv $f /Volumes/Staging/ingest/diskImages/$collnum/$directory/metadata/
+for f in `find . -name "$acqid_*.log"`; do 
+	directory=`echo "$acqname" | cut -d . -f 1 `
+	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/metadata/
 
 done
 
