@@ -7,7 +7,7 @@ NC='\033[0m'
 
 echo -e "${BLUE}This script will create SIP templates for each item.${NC}"
 #ask for user input to select legacy m number workflow or acqid workflow:
-echo -e "${BLUE}Please enter "m" for legacy collection numbers or enter "a" for acqusition id format:${NC}"
+echo -e "${BLUE}Please enter 'm' for legacy collection numbers or enter 'a' for acqusition id format:${NC}"
 
 read numtype
 
