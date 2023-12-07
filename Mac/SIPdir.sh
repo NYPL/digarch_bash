@@ -16,7 +16,7 @@ if [[ "$numtype" == "a" ]]
 then
 	echo -e "${BLUE}Please enter the four digit SPEC aquisition id in the format ACQ_#### format:${NC}"
 
-	read aquisition
+	read acquisition
 
 	if [[ "$PWD" =~ "$acquisition" ]]
 
