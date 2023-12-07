@@ -22,11 +22,11 @@ then
 
 	then
 
-		echo -e "${BLUE}Please enter the number of the first item you'd like a folder made for:${NC}"
+		echo -e "${BLUE}Please enter the SPEC object id of the first item you'd like a folder made for:${NC}"
 
 		read first
 
-		echo -e "${BLUE}Please enter the last number:${NC}"
+		echo -e "${BLUE}Please enter the SPEC object id of the last number you'd like a folder made for:${NC}"
 
 		read last
 
