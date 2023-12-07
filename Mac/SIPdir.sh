@@ -39,6 +39,7 @@ then
 	else
 		echo -e "${BLUE}Please change into the acquisition directory and try again.${NC}" && exit 1
 	fi
+fi
 
 if $numtype = "m"
 
@@ -69,3 +70,4 @@ then
 	else
 		echo -e "${BLUE}Please change into the collection directory and try again.${NC}" && exit 1
 	fi
+fi
