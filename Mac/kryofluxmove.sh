@@ -6,7 +6,7 @@ GREEN='\033[1;32m'
 RED='\033[0:31m'
 NC='\033[0m'
 
-echo -e  "${BLUE}Please enter your collection number to initiate the move.${NC}"
+echo -e  "${BLUE}Please enter your legacy collection number in format M##### or your acquisition number in format ACQ_#### to initiate the move.${NC}"
 
 read acqid
 
@@ -16,7 +16,7 @@ for f in `find . -name "$acqid-*.tar"`; do
 
 done
 
-for f in `find . -name "$acqid_*.tar"`; do 
+for f in `find . -name "$acqid"_"*.tar"`; do 
 	directory=`echo "$acqname" | cut -d . -f 1 `
 	mv $f /Volumes/Staging/KFStreamArchive
 
@@ -28,7 +28,7 @@ for f in `find . -name "$acqid-*.001"`; do
 
 done
 
-for f in `find . -name "$acqid_*.001"`; do 
+for f in `find . -name "$acqid"_"*.001"`; do 
 	directory=`echo "$acqname" | cut -d . -f 1 `
 	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/objects/
 
@@ -40,7 +40,7 @@ for f in `find . -name "$acqid-*.img"`; do
 
 done
 
-for f in `find . -name "$acqid_*.img"`; do
+for f in `find . -name "$acqid"_"*.img"`; do
 	directory=`echo "$acqname" | cut -d . -f 1 `
 	mv $f /Volumes/DigArchDiskStation/Staging/ingest/diskImages/$acqid/$directory/objects/
 
@@ -52,7 +52,7 @@ for f in `find . -name "$acqid-*.log"`; do
 
 done
 
-for f in `find . -name "$acqid_*.log"`; do 
+for f in `find . -name "$acqid"_"*.log"`; do 
 	directory=`echo "$acqname" | cut -d . -f 1 `
 	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/metadata/
 
