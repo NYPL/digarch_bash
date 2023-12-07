@@ -11,7 +11,7 @@ echo -e "${BLUE}Please enter 'm' for legacy collection numbers or enter 'a' for 
 
 read numtype
 
-if $numtype == "a"
+if [[ "$numtype" == "a" ]]
 
 then
 	echo -e "${BLUE}Please enter the four digit SPEC aquisition id in the format ACQ_#### format:${NC}"
@@ -41,7 +41,7 @@ then
 	fi
 fi
 
-if $numtype == "m"
+if [[ "$numtype" == "m" ]]
 
 then
 
