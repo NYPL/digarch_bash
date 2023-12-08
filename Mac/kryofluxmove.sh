@@ -24,37 +24,37 @@ done
 
 for f in `find . -name "$acqid-*.001"`; do 
 	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
-	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/objects/
+	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/objects
 
 done
 
 for f in `find . -name "$acqid"_"*.001"`; do 
 	directory=`echo "$acqname" | cut -d . -f 1 `
-	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/objects/
+	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/objects
 
 done
 
 for f in `find . -name "$acqid-*.img"`; do
 	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
-	mv $f /Volumes/DigArchDiskStation/Staging/ingest/diskImages/$acqid/$directory/objects/
+	mv $f /Volumes/DigArchDiskStation/Staging/ingest/diskImages/$acqid/$directory/objects
 
 done
 
 for f in `find . -name "$acqid"_"*.img"`; do
 	directory=`echo "$acqname" | cut -d . -f 1 `
-	mv $f /Volumes/DigArchDiskStation/Staging/ingest/diskImages/$acqid/$directory/objects/
+	mv $f /Volumes/DigArchDiskStation/Staging/ingest/diskImages/$acqid/$directory/objects
 
 done
 
 for f in `find . -name "$acqid-*.log"`; do 
 	directory=`echo "$f" | cut -d \. -f 2 | cut -d \/ -f 2`
-	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/metadata/
+	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/metadata
 
 done
 
 for f in `find . -name "$acqid"_"*.log"`; do 
 	directory=`echo "$acqname" | cut -d . -f 1 `
-	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/metadata/
+	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/metadata
 
 done
 
