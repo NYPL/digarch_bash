@@ -17,7 +17,7 @@ for f in `find . -name "$acqid-*.tar"`; do
 done
 
 for f in `find . -name "$acqid"_"*.tar"`; do 
-	directory=`echo "$acqname" | cut -d . -f 1 `
+	directory=`echo "$acqname" | cut -d . -f 1`
 	mv $f /Volumes/Staging/KFStreamArchive
 
 done
@@ -29,7 +29,7 @@ for f in `find . -name "$acqid-*.001"`; do
 done
 
 for f in `find . -name "$acqid"_"*.001"`; do 
-	directory=`echo "$acqname" | cut -d . -f 1 `
+	directory=`echo "$acqname" | cut -d . -f 1`
 	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/objects
 
 done
@@ -41,7 +41,7 @@ for f in `find . -name "$acqid-*.img"`; do
 done
 
 for f in `find . -name "$acqid"_"*.img"`; do
-	directory=`echo "$acqname" | cut -d . -f 1 `
+	directory=`echo "$acqname" | cut -d . -f 1`
 	mv $f /Volumes/DigArchDiskStation/Staging/ingest/diskImages/$acqid/$directory/objects
 
 done
@@ -53,11 +53,9 @@ for f in `find . -name "$acqid-*.log"`; do
 done
 
 for f in `find . -name "$acqid"_"*.log"`; do 
-	directory=`echo "$acqname" | cut -d . -f 1 `
+	directory=`echo "$acqname" | cut -d . -f 1`
 	mv $f /Volumes/Staging/ingest/diskImages/$acqid/$directory/metadata
 
 done
 
 echo -e "${GREEN}Disk image has been transferred to diskIMages and steam files transferred to KFSteamArchive.${NC}"
-
-
